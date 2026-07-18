@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/blank", "destination": "/faq", "permanent": true },
+    { "source": "/projects", "destination": "/team", "permanent": true }
+  ]
+}
