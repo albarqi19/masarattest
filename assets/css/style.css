@@ -290,14 +290,6 @@ section { padding: 5.5rem 0; }
   object-fit: cover;
   width: 100%;
 }
-.about-media::before {
-  content: '';
-  position: absolute;
-  inset: -18px 40% 40% -18px;
-  border: 2px solid var(--gold);
-  border-radius: var(--radius);
-  z-index: -1;
-}
 
 /* ---------- Stats (أبيض كما في الأصل) ---------- */
 .stats-grid {
