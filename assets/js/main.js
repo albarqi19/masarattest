@@ -46,6 +46,23 @@ const counterIO = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 document.querySelectorAll('[data-count]').forEach(el => counterIO.observe(el));
 
+// تبويبات الفلترة (الأسئلة الشائعة والمدونة)
+document.querySelectorAll('.faq-tabs').forEach(tabs => {
+  const buttons = tabs.querySelectorAll('.faq-tab');
+  const scope = tabs.closest('section') || document;
+  buttons.forEach(btn => btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    const cat = btn.dataset.cat;
+    scope.querySelectorAll('[data-cat]').forEach(el => {
+      if (el.classList.contains('faq-tab')) return;
+      const show = (cat === 'all') || (el.dataset.cat === cat);
+      el.hidden = !show;
+      if (show) el.classList.add('in');
+    });
+  }));
+});
+
 // نموذج تسجيل الدخول — النظام غير مربوط بعد، يظهر تنبيهاً
 const loginForm = document.getElementById('login-form');
 if (loginForm) {
