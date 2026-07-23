@@ -70,7 +70,7 @@ ul { list-style: none; }
   gap: 1rem;
   padding-block: .6rem;
 }
-.brand img { height: 70px; width: auto; }
+.brand img { height: 86px; width: auto; }
 .main-nav ul { display: flex; gap: 1.9rem; align-items: center; }
 .main-nav a {
   color: var(--navy);
@@ -578,7 +578,7 @@ section { padding: 5.5rem 0; }
 }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 .marquee-track img {
-  height: 76px;
+  height: 150px;
   width: auto;
   object-fit: contain;
   transition: transform .35s;
@@ -747,13 +747,6 @@ details.faq .answer { padding: 0 1.5rem 1.5rem; color: var(--gray); line-height:
   position: relative;
   overflow: hidden;
 }
-.vm-card::before {
-  content: '';
-  position: absolute;
-  top: 0; inset-inline-start: 0;
-  width: 4px; height: 100%;
-  background: linear-gradient(var(--gold), var(--gold-light));
-}
 .vm-card h3 { color: var(--navy); font-weight: 800; font-size: 1.2rem; margin-bottom: .8rem; }
 .vm-card p { color: var(--gray); line-height: 2.1; }
 
@@ -903,7 +896,6 @@ details.faq .answer { padding: 0 1.5rem 1.5rem; color: var(--gray); line-height:
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: 2.8rem 2.5rem;
-  box-shadow: var(--shadow);
   text-align: center;
   animation: rise .7s both;
 }
